@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Simple Page with CKEditor</title>
+       <!-- Make sure the path to CKEditor is correct. -->
+       <script src="./ckeditor/ckeditor.js"></script>
+       <style>
+       header{
+           background-color: #000;
+           padding:20px 0 20px 20px;
+       }
+       header .hd_wh{
+           color:#fff;
+           font-weight: bold;
+       }
+       </style>
+</head>
+<body>
+    <header>
+        <span class="hd_wh">YazaNamoo 글쓰기</span>
+    </header>
+    <form method="post">
+          <p>
+              <textarea name="editor1" id="editor1" rows="10" cols="80">
+                  This is my textarea to be replaced with CKEditor.
+              </textarea>
+              <script>
+                  // Replace the <textarea id="editor1"> with a CKEditor
+                  // instance, using default configuration.
+                  CKEDITOR.replace( 'editor1' );
+                  // $('#cke_editor1').css('margin','0 auto !important');
+              </script>
+          </p>
+          <p>
+              <input type="submit" name="" value="저장">
+              <input type="reset" name="" value="취소">
+          </p>
+
+       </form>
+
+</body>
+</html>
