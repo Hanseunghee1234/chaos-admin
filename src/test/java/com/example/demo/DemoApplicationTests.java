@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.sql.Connection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -52,7 +53,7 @@ public class DemoApplicationTests {
 	@Test
 	public void mapperTest() throws Exception {
 
-		Map<String, Object> map = null;
+		Map<String, Object> map = new HashMap<String, Object>();
 		map.put("ddd", "fff");
 		System.out.println(map);
 	}
