@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.freeive.chaos.admin.TestMapper;
+import com.freeive.chaos.admin.WriteMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,31 +15,30 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
+
 public class TestController {
 
     @Autowired
     TestMapper testMapper;
 
-    /*@RequestMapping("/sh2")
+    @Autowired
+    WriteMapper writeMapper;
+
+    @RequestMapping("/write")
+    //@ResponseBody
     public String ddddd(Model model) throws Exception {
+        List<Map<String, Object>> editor = writeMapper.selectEditor();       
+        model.addAttribute("write", editor);
 
-        List<Map<String, Object>> course = testMapper.selectCourse();
-
-
-        model.addAttribute("category_name", course.get(0).get("category_name"));
-        System.out.println(course);
-
-        return "sh";
-    }*/
+        return "write";
+    }
 
     @RequestMapping(value="/curriculum_list", method=RequestMethod.GET)
     //@ResponseBody
     public String ddddd2(Model model) throws Exception {
-        //Map<String, Object> result = new HashMap<String, Object>();
         List<Map<String, Object>> course = testMapper.selectCourse();       
         model.addAttribute("category", course);
 
-        //result.put("category_name", course.get(0).get("category_name")) ;
         return "sh";
     }
     
