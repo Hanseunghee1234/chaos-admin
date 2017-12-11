@@ -6,5 +6,10 @@
     <select id="selectCourse" resultType="java.util.Map">
         select * from t_curriculum_category
     </select>
- 
+</mapper>
+
+<mapper namespace="com.freeive.chaos.admin.WriteMapper">
+    <select id="selectEditor" resultType="java.util.Map">
+        select * from t_editor_master
+    </select>
 </mapper>
