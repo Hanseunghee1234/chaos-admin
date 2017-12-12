@@ -35,15 +35,15 @@ public class TestController {
     //@ResponseBody
     public String ddddd2(Model model) throws Exception {
         //Map<String, Object> result = new HashMap<String, Object>();
-        List<Map<String, Object>> course = testMapper.selectCourse();       
+        List<Map<String, Object>> course = testMapper.selectCourse();
         model.addAttribute("category", course);
 
         //result.put("category_name", course.get(0).get("category_name")) ;
         return "sh";
     }
-    
-    @RequestMapping(value="/curriculum_list_data", method=RequestMethod.POST, produces="application/json; charset=utf8")   
-    @ResponseBody 
+
+    @RequestMapping(value="/curriculum_list_data", method=RequestMethod.POST, produces="application/json; charset=utf8")
+    @ResponseBody
     public List<Map<String, Object>> ffff2(Model model) throws Exception {
         Map<String, Object> result = new HashMap<String, Object>();
         List<Map<String, Object>> course = testMapper.selectCourse();

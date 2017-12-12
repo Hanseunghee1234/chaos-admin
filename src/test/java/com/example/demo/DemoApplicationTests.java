@@ -1,13 +1,14 @@
 package com.example.demo;
 
 import java.sql.Connection;
-import java.util.List;
+import java.util.HashMap;
+//import java.util.List;
 import java.util.Map;
 
 import javax.sql.DataSource;
 
 import com.freeive.chaos.admin.Application;
-import com.freeive.chaos.admin.TestMapper;
+//import com.freeive.chaos.admin.TestMapper;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
@@ -30,8 +31,10 @@ public class DemoApplicationTests {
 	private SqlSessionFactory sqlSession;
 	
 
+	/*
 	@Autowired
 	private TestMapper mapper;
+	*/
 
 
 	@Test
@@ -52,9 +55,7 @@ public class DemoApplicationTests {
 	@Test
 	public void mapperTest() throws Exception {
 
-		Map<String, Object> map = null;
-		map.put("ddd", "fff");
+		Map<String, Object> map = new HashMap<String, Object>();
 		System.out.println(map);
 	}
-
 }
