@@ -14,23 +14,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
+
 public class TestController {
 
     @Autowired
     TestMapper testMapper;
-
-    /*@RequestMapping("/sh2")
-    public String ddddd(Model model) throws Exception {
-
-        List<Map<String, Object>> course = testMapper.selectCourse();
-
-
-        model.addAttribute("category_name", course.get(0).get("category_name"));
-        System.out.println(course);
-
-        return "sh";
-    }*/
-
     @RequestMapping(value="/curriculum_list", method=RequestMethod.GET)
     //@ResponseBody
     public String ddddd2(Model model) throws Exception {
@@ -38,7 +26,6 @@ public class TestController {
         List<Map<String, Object>> course = testMapper.selectCourse();
         model.addAttribute("category", course);
 
-        //result.put("category_name", course.get(0).get("category_name")) ;
         return "sh";
     }
 

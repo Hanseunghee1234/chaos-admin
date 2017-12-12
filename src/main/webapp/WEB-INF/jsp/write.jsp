@@ -3,6 +3,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
+<<<<<<< HEAD
 <script src="/ckeditor/ckeditor.js"></script>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 /*<script>
@@ -61,3 +62,6 @@
     </form>
 </div>
 
+=======
+${editor_title}
+>>>>>>> 7e0f8bb4487ced7b7470629cf46df5b1193c9618
